@@ -22,6 +22,7 @@ This script automates the process of configuring AWS credentials and assuming a 
      AWS_REGION=your_region
      AWS_OUTPUT=your_default_format
      ROLE_ARN=your_role_arn
+     EKS_CLUSTER_NAME=your_eks_cluster_name
      ```
    - Replace each placeholder with your actual details.
 

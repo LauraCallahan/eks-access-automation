@@ -34,3 +34,13 @@ else
     echo "Failed to assume role."
     exit 1
 fi
+
+# Update kubeconfig for the EKS cluster
+aws eks update-kubeconfig --region "$AWS_REGION" --name "$EKS_CLUSTER_NAME"
+
+if [ $? -eq 0 ]; then
+    echo "Kubeconfig updated successfully."
+else
+    echo "Failed to update kubeconfig."
+    exit 1
+fi
